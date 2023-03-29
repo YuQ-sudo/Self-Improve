@@ -1,0 +1,3 @@
+g++ -ggdb3 -DLINUX -Wno-sign-compare -fPIC -std=c++0x -I. -I../framework/include -I/usr/local/cuda/include  -o ../framework/source/pipline.o -c ../framework/source/pipline.cpp
+g++ -ggdb3 -DLINUX -Wno-sign-compare -fPIC -std=c++0x -I. -I../framework/include -I/usr/local/cuda/include  -o ../framework/source/module.o -c ../framework/source/module.cpp
+g++ -ggdb3 -DLINUX -Wno-sign-compare -fPIC -std=c++0x -o xxx ./demo.o ../framework/source/pipline.o ../framework/source/module.o  -L/usr/local/lib -L/usr/local/cuda/lib64
