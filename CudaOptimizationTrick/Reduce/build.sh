@@ -1,0 +1,2 @@
+/usr/local/cuda/bin/nvcc -g -G -o reduce ./reduce_baseline.cu -I/usr/local/cuda/include -I/usr/local/cuda/samples/common/inc -I/data_nas/yckj2733/train/cuda-samples/Common  -L/usr/local/cuda/lib64 -lcudart
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH}

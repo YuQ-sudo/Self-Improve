@@ -1,0 +1,1 @@
+g++  -ggdb3 -DLINUX -Wno-sign-compare -fPIC -std=c++0x  -o xxx sort.cpp

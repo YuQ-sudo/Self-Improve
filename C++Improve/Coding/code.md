@@ -51,6 +51,34 @@ void backtracking(参数) {
   * 如果求组合数就是外层for循环遍历物品，内层for遍历背包。
   * 如果求排列数就是外层for遍历背包，内层for循环遍历物品。
 
+
+<!-- Leetcode岛屿问题专项 -->
+
+<!-- ## https://zhuanlan.zhihu.com/p/480696645 -->
+
+* 岛屿衍生问题主要有岛屿数量 岛屿周长 岛屿最大面积等问题
+* 解决方法：DFS。base case 以及 相邻节点访问。
+* 以方格（r,c）相邻网格（r-1,c）（r+1,c）（r,c-1）（r,c+1）进行搜索。
+* 需要注意的是 避免重复遍历。否则会进入死循环。
+  
+```cpp
+void dfs(vector<vector<char>>&grid,int r,int c){
+        //base case
+        //如果坐标越界直接返回,是海洋返回，访问过了返回
+        if(!inArea(grid,r,c)||grid[r][c]!='1'){
+            return;
+        }
+        grid[r][c]='2';
+        dfs(grid,r-1,c);
+        dfs(grid,r+1,c);
+        dfs(grid,r,c-1);
+        dfs(grid,r,c+1);
+    }
+    bool inArea(vector<vector<char>>&grid,int r,int c){
+        return 0<=r&&r<grid.size()&&0<=c&&c<grid[0].size();
+    }
+
+```
 ## 每日刷题打卡
 
 ### 20230321
@@ -143,3 +171,7 @@ void backtracking(参数) {
 
 * [ ] 300.最大递增子序列
 * [ ] 674.最大连续递增子序列
+
+
+### 排序
+

@@ -1,0 +1,1 @@
+/usr/local/cuda/bin/nvcc -g -G -o add ./vector_add.cu -I/usr/local/cuda/include -L/usr/local/cuda/lib64 -lcudart
